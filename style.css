@@ -1,54 +1,50 @@
 body{
-background:#0f0f0f;
-color:white;
-font-family:Arial;
-text-align:center;
-margin:0;
-}
 
-header{
-padding:40px;
+background:#0b0b0b;
+color:white;
+font-family:sans-serif;
+text-align:center;
+
 }
 
 h1{
+
 color:red;
 font-size:50px;
-text-shadow:0 0 15px red;
+text-shadow:0 0 20px red;
+
 }
 
 .btn{
+
 background:red;
-padding:12px 25px;
+padding:12px 20px;
 border-radius:8px;
 text-decoration:none;
 color:white;
-margin:10px;
-display:inline-block;
-cursor:pointer;
-}
 
-.btn:hover{
-background:#ff2e2e;
 }
 
 input{
+
 padding:10px;
 margin:5px;
 border-radius:6px;
 border:none;
+
 }
 
-.hidden{
-display:none;
-}
+#servers{
 
-#server-list{
 margin-top:20px;
+
 }
 
 .server{
+
 background:#1a1a1a;
-padding:15px;
 margin:10px;
+padding:15px;
 border-radius:10px;
+
 }
