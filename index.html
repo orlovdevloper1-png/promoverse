@@ -4,22 +4,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>PromoVerse</title>
 
-<!-- CSS Connection -->
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<h1>🚀 Welcome to PromoVerse</h1>
-<p>The best place to advertise and grow Discord servers.</p>
+<header>
+<h1>PromoVerse</h1>
+<p>Advertise & Grow Your Discord Server</p>
+</header>
 
-<a href="https://discord.gg/ZrC622zEhR">Join Our Discord</a>
+<section class="buttons">
 
-<!-- JS Connection -->
+<a class="btn" href="https://discord.gg/ZrC622zEhR">Join Discord</a>
+
+<button class="btn" onclick="showForm()">Submit Your Server</button>
+
+</section>
+
+<section id="server-form" class="hidden">
+
+<h2>Submit Your Server</h2>
+
+<input id="name" placeholder="Server Name">
+<input id="link" placeholder="Discord Invite Link">
+
+<button onclick="addServer()">Submit</button>
+
+</section>
+
+<section>
+
+<h2>Servers</h2>
+
+<div id="server-list"></div>
+
+</section>
+
 <script src="script.js"></script>
 
 </body>
