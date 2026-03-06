@@ -1,20 +1,60 @@
-function showForm(){
-document.getElementById("server-form").classList.toggle("hidden")
-}
+let servers=[]
 
 function addServer(){
 
 let name=document.getElementById("name").value
 let link=document.getElementById("link").value
 
-let server=document.createElement("div")
-server.className="server"
+let data={name,link}
 
-server.innerHTML=`
-<h3>${name}</h3>
-<a href="${link}" target="_blank">Join Server</a>
+servers.push(data)
+
+renderServers()
+
+}
+
+function renderServers(){
+
+let container=document.getElementById("servers")
+
+container.innerHTML=""
+
+servers.forEach(server=>{
+
+container.innerHTML+=`
+<div class="server">
+
+<h3>${server.name}</h3>
+
+<a href="${server.link}" target="_blank">Join Server</a>
+
+</div>
 `
 
-document.getElementById("server-list").appendChild(server)
+})
+
+}
+
+function searchServer(){
+
+let search=document.getElementById("search").value.toLowerCase()
+
+let container=document.getElementById("servers")
+
+container.innerHTML=""
+
+servers.filter(s=>s.name.toLowerCase().includes(search)).forEach(server=>{
+
+container.innerHTML+=`
+<div class="server">
+
+<h3>${server.name}</h3>
+
+<a href="${server.link}" target="_blank">Join Server</a>
+
+</div>
+`
+
+})
 
 }
